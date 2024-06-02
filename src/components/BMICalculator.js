@@ -3,15 +3,14 @@ import { useRef, useState } from "react";
 function BMICalculator() {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
+  const [bmi, setBmi] = useState(0);
   const [isShow, setIsShow] = useState(false);
-
-  const bmi = useRef(0);
 
   function handleCalculate() {
     if (!height || !weight) return;
 
     setIsShow((isShow) => (isShow ? isShow : !isShow));
-    bmi.current = weight / (height * height);
+    setBmi(weight / (height * height));
 
     setHeight("");
     setWeight("");
@@ -31,7 +30,7 @@ function BMICalculator() {
 }
 
 function Info({ bmi }) {
-  const bmiRes = bmi.current * 10000;
+  const bmiRes = bmi * 10000;
   let result;
 
   if (bmiRes < 18.5) {
