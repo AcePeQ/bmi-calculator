@@ -1,13 +1,114 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: #f5b553;
+
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  width: 50rem;
+  background-color: #392f2f;
+
+  border-radius: 12px;
+
+  padding: 6rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.bmi {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.15rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+input {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #4f4141;
+
+  border: none;
+  color: inherit;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+button {
+  display: inline-block;
+  background-color: #4f4141;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: inherit;
+
+  padding: 1rem 2rem;
+  border-radius: 6px;
+
+  margin-top: 0.5rem;
+}
+
+.info {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  font-size: 2rem;
 }
